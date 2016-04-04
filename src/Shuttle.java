@@ -8,7 +8,8 @@ class Shuttle extends Thread {
 
 	public void run() {
 		while (true) {
-			st.moveuntilstop();
+//			st.moveuntilstop();
+			st.moveuntilstop(id);
             try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {

@@ -1,8 +1,8 @@
-class Passager extends Thread { 
+class Passenger extends Thread { 
         private Station st;        //账户 
         private int id;
         
-        Passager(Station st,int id) { 
+        Passenger(Station st,int id) { 
                 this.st = st; 
                 this.id = id;
         } 
