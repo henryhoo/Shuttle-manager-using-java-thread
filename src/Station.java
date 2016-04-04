@@ -61,8 +61,6 @@ class Station {
 	public void passengeron(int id) {
 		lock.lock();
 		try {
-			
-			
 			switch (start[id]) {
 			case 0:
 				try {
@@ -130,7 +128,7 @@ class Station {
 						_move.signalAll();
 						_stop3.await();
 					}
-					if (!tryonshuffle(id) || isstationempty(3)) {
+					if (!tryonshuffle(id)) {
 						System.out.println("tell train to move");
 						_move.signalAll();
 						_stop3.await();
