@@ -1,17 +1,18 @@
 class Passager extends Thread { 
         private Station st;        //账户 
-
-        Passager(Station st) { 
+        private int id;
+        
+        Passager(Station st,int id) { 
                 this.st = st; 
+                this.id = id;
         } 
 
         public void run() { 
                 while (true) {
-                	st.passengeroff();
-//                	st.randomizestart();
-                	st.passengeron();
-                    st.randomizedest();
-                    
+//                	st.passengeroff();
+//                	st.passengeron();
+//                    st.randomizedest();
+                   st.passengeron(id); 
                     try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {

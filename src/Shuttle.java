@@ -1,8 +1,9 @@
 class Shuttle extends Thread {
 	private Station st; // 账户
-
-	Shuttle(Station st) {
+	private int id;
+	Shuttle(Station st,int id) {
 		this.st = st;
+		this.id = id;
 	}
 
 	public void run() {
